@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Appointment</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f2f2f2;
+}
+
+.appointment-form {
+  width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  position: relative;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+</style>
+</head>
+<body>
+<div class="centered">
+<div class="appointment-form">
+<div class="header">
+<a href="appointment scheduling.html"><img src="pro9.jpg" alt="Back Button" width="50" height="50"></a>
+<h2 style="margin-left: 20px;">Book Your Appointment</h2>
+</div>
+<form>
+<div class="form-group">
+<label for="name">Name:</label>
+<input type="text" id="name" required>
+</div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="doctor">Choose Doctor:</label>
+      <select id="doctor" required>
+        <option value="">Select Doctor</option>
+        <option value="Dr. John">Dr. John</option>
+        <option value="Dr. Emma">Dr. Emma</option>
+        <option value="Dr. Michael">Dr. Michael</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="date">Appointment Date:</label>
+      <input type="date" id="date" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="time">Appointment Time:</label>
+      <select id="time" required>
+        <option value="">Select Time</option>
+        <option value="9:00 AM">9:00 AM</option>
+        <option value="10:00 AM">10:00 AM</option>
+        <option value="11:00 AM">11:00 AM</option>
+        <option value="2:00 PM">2:00 PM</option>
+        <option value="3:00 PM">3:00 PM</option>
+        <option value="4:00 PM">4:00 PM</option>
+      </select>
+    </div>
+    
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</div>
+</body>
+</html>

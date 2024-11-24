@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Images Side by Side</title>
+  <style>
+    body {
+      font-size: 25px;
+    }
+    .container {
+      width: 80%;
+      margin: 40px auto;
+      text-align: center;
+    }
+    .images {
+      display: flex;
+      justify-content: space-between;
+    }
+    .image-container {
+      width: 45%;
+      margin: 10px;
+    }
+    .image-container img {
+      width: 100%;
+      height: auto;
+    }
+    .image-text {
+      padding: 10px;
+      text-align: justify;
+    }
+    .expert-name {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Meet our Experts</h1>
+    <form action="appointment scheduling.html" method="get">
+      <div class="images">
+        <div class="image-container">
+          <img src="pro1.jpg" alt="Image 1">
+          <p class="expert-name" id="expert-name1">Expert 1</p>
+          <input type="text" id="name1" name="expert1" placeholder="Expert you want..?">
+          <p class="image-text">A board-certified physician, medical doctor who has demonstrated expertise in a specific medical specialty.</p>
+        </div>
+        <div class="image-container">
+          <img src="pro2.jpg" alt="Image 2">
+          <p class="expert-name" id="expert-name2">Expert 2</p>
+          <input type="text" id="name2" name="expert2" placeholder="Expert you want..?">
+          <p class="image-text">Experienced nurse dedicated to providing compassionate and personalized care.</p>
+        </div>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  <script>
+    const name1Input = document.getElementById('name1');
+    const name2Input = document.getElementById('name2');
+    document.querySelector('form').addEventListener('submit', (e) => {
+      const expertName1 = name1Input.value;
+      const expertName2 = name2Input.value;
+      document.getElementById('expert-name1').innerHTML = expertName1;
+      document.getElementById('expert-name2').innerHTML = expertName2;
+      name1Input.value = '';
+      name2Input.value = '';
+    });
+  </script>
+</body>
+</html>
+

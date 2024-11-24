@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      width: 60%;
+      margin: 25px auto;
+    }
+    
+    .profile-header {
+      background-color: #f0f0f0ae;
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    .profile-picture {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: 20px;
+    }
+    
+    .home-picture {
+      width: 50px;
+      height:50px;
+      margin: 20px;
+    }
+    
+    .additional-picture {
+      width: 50px;
+      height: 50px;
+      margin: 20px;
+    }
+    
+    .info-section {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .profile-info {
+      display: inline-block;
+      vertical-align: top;
+    }
+    
+    .edit-form {
+      display: none;
+    }
+    
+    .profile-info h2 {
+      margin-top: 0;
+    }
+    
+    .edit-button {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .text-section {
+      width: 60%;
+      margin: 25px auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-header">
+      <div style="text-align:center;">
+        <h1>Profile Information</h1>
+        <a href="homepage.html"><img src="pro9.jpg" alt="Home Picture" class="home-picture"></a>
+        <img src="pro4.jpg" alt="Additional Picture" class="additional-picture">
+        <a href="homepage.html"><img src="pro5.jpg" alt="Profile Picture" class="profile-picture"></a>
+      </div>
+      <div class="info-section">
+        <div class="profile-info">
+          <h2 id="name">Name:_________</h2>
+          <p id="username">Username:__________</p>
+          <p id="email">Email:____________@gmail.com</p>
+          <button class="edit-button" onclick="editProfile()">Edit Profile</button>
+        </div>
+        <div class="edit-form">
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name-input" value=" "><br><br>
+            <label for="username">Username:</label>
+            <input type="text" id="username-input" value=" "><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email-input" value=" "><br><br>
+            <button class="edit-button" onclick="saveProfile()">Save Changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function editProfile() {
+      document.querySelector('.profile-info').style.display = 'none';
+      document.querySelector('.edit-form').style.display = 'block';
+    }
+    
+    function saveProfile() {
+      var name = document.getElementById('name-input').value;
+      var username = document.getElementById('username-input').value;
+      var email = document.getElementById('email-input').value;
+      
+      document.getElementById('name').innerHTML = 'Name: ' + name;
+      document.getElementById('username').innerHTML = 'Username: ' + username;
+      document.getElementById('email').innerHTML = 'Email: ' + email;
+      
+      document.querySelector('.profile-info').style.display = 'block';
+      document.querySelector('.edit-form').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

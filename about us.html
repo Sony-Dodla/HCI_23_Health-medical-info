@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      width: 45%;
+      margin: 40px auto;
+    }
+    
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .about-header {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Added */
+      margin-bottom: 50px;
+    }
+    
+    .about-images {
+      display: flex;
+      flex-direction: row;
+      margin-right: 20px;
+    }
+    
+    .image {
+      width: 50px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 0 10px;
+    }
+    
+    .about-text {
+      text-align: center;
+      font-size: 18px;
+    }
+    
+    .about-text h1 {
+      color: #009996;
+      margin-top: 0;
+      font-size: 40px;
+      font-weight: bold;
+    }
+    
+    .header {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 20px;
+      padding-left: 0; /* Changed */
+    }
+    
+    .header-image {
+      width: 30px;
+      height: auto;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    
+    .home-image {
+      width: 30px;
+      height: auto;
+      margin-right: 20px;
+    }
+    
+    @media only screen and (max-width: 768px) {
+      .about-section {
+        width: 100%;
+      }
+      .about-images {
+        justify-content: center;
+      }
+      .image {
+        width: 30%;
+        margin: 0 5px;
+      }
+      .about-text {
+        font-size:100px;
+      }
+      .about-text h1 {
+        font-size:100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="about-section">
+      <div class="about-header">
+        <div class="header">
+          <a href="homepage.html"><img src="pro5.jpg" alt="Home" class="home-image"></a>
+          <a href="homepage.html"><img src="pro9.jpg" alt="Nurse" class="header-image"></a>
+        </div>
+        <h1 class="about-text">About Us</h1>
+      </div>
+      <div class="about-text">
+        <p>Welcome to our website! We are a team of passionate individuals dedicated to providing exceptional services.</p>
+        <p>Our mission is to deliver high-quality solutions that exceed our clients' expectations. Patients, doctors are essential stakeholders in healthcare. Patients seek quality care, relief and reassurance. Doctors provide diagnoses, treatments and compassion, leveraging research findings to improve outcomes.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
